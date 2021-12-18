@@ -15,10 +15,26 @@ function ItemDetailsContainer() {
 
     const { cartList, agregarProducto } =  useContext(CartContext) //le paso  como parametro CartContex: que es el contexto   que cree
   
+
+
+
+
+
       function onAdd(cant) {
        setCount(cant)
-      agregarProducto( {...productoIndividual, cantidad: cant} ) //llamo la funcion y le paso como paraetro el producto , mas la cantidad
-        //llama al Objeto:
+   if(cartList <=1){
+    agregarProducto( {...productoIndividual, cantidad: cant} )
+    //llamo la funcion y le paso como paraetro el producto , mas la cantidad
+  //llama al Objeto:
+ 
+   }else{
+     
+   }
+
+
+ 
+     
+
     }
      console.log(cartList)
  
